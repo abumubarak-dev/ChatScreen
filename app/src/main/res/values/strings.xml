@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ChatScreen</string>
+    <string name="tiltle_txt">You may know</string>
+    <string name="search_txt">Search for...</string>
+    <string name="username_1">Jessica Miles</string>
+    <string name="sub_id_1">Jessi_443</string>
+    <string name="username_2">Julia Petersen</string>
+    <string name="sub_id_2">julia928</string>
+    <string name="username_3">Prince Phelp</string>
+    <string name="sub_id_3">prince7s7</string>
+    <string name="username_4">Josefa Gardner</string>
+    <string name="sub_id_4">josefan_e</string>
+    <string name="username_5">Byrd Hewitt</string>
+    <string name="sub_id_5">byrdm_e</string>
+    <string name="username_6">Marisa Cain</string>
+    <string name="sub_id_6">marisa989</string>
+    <string name="time">2:13 pm</string>
+    <string name="i_hope_you_like_crazy_alien_movie">I hope you like Crazy Alien movie!!!!</string>
+</resources>

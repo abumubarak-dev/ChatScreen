@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/standard_ms"
+            android:paddingTop="@dimen/standard_ms">
+
+            <ImageView
+                style="@style/ToolabrImageStyle"
+                android:id="@+id/back_btn"
+                android:src="@drawable/ic_chevron_left_black_24dp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                style="@style/TextStyles.TextStyleChat"
+                app:fontFamily="@font/custom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                style="@style/ToolabrImageStyle"
+                android:src="@drawable/ic_more_horiz_black_24dp"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+
+        <TextView
+            android:id="@+id/time_now"
+            style="@style/TimeTextStyle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/chat_i"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/time_now">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/user_img_chat"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                tools:src="@tools:sample/avatars[0]" />
+
+            <TextView
+                android:layout_width="197dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/chat_green"
+                android:fontFamily="@font/qb"
+                android:lineSpacingExtra="4dp"
+                android:padding="10dp"
+                android:text="@string/i_hope_you_like_crazy_alien_movie"
+                android:textColor="@color/black"
+                app:layout_constraintLeft_toRightOf="@+id/user_img_chat" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/chat_lyt_2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="20dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chat_i">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/user_img_chats"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:src="@tools:sample/avatars[8]" />
+
+            <TextView
+                android:layout_width="197dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/chat_white"
+                android:fontFamily="@font/qb"
+                android:lineSpacingExtra="4dp"
+                android:padding="10dp"
+                android:text="Yes of course i like very much.  (_^_)"
+                android:textColor="@color/black"
+                app:layout_constraintRight_toLeftOf="@+id/user_img_chats" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/time_now_2"
+            style="@style/TimeTextStyle"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chat_lyt_2" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/chat_iii"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/time_now_2">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/user_img_chat_iii"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                tools:src="@tools:sample/avatars[0]" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/chat_green"
+                android:fontFamily="@font/qb"
+                android:lineSpacingExtra="4dp"
+                android:padding="10dp"
+                android:text="That's Great...."
+                android:textColor="@color/black"
+                app:layout_constraintLeft_toRightOf="@+id/user_img_chat_iii" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/chat_lyt_2_iii"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="20dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chat_iii">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/user_img_chats_sa"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:src="@tools:sample/avatars[8]" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/chat_white"
+                android:fontFamily="@font/qb"
+                android:lineSpacingExtra="4dp"
+                android:padding="10dp"
+                android:text="Yep... ^_^"
+                android:textColor="@color/black"
+                app:layout_constraintRight_toLeftOf="@+id/user_img_chats_sa" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/bottom_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/buttom"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/chat"
+            app:layout_constraintBottom_toTopOf="@+id/buttom_ic">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/qm"
+                android:padding="10dp"
+                android:text="Send Message ..."
+                android:textColor="@color/grey_d" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/ic_send_black_24dp"
+                app:layout_constraintRight_toRightOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/buttom_ic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/ic_account_circle_black_24dp"
+                app:layout_constraintEnd_toStartOf="@+id/imageView5"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/ic_photo_camera_black_24dp"
+                app:layout_constraintEnd_toStartOf="@+id/imageView7"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageView6" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/ic_photo_size_select_actual_black_24dp"
+                app:layout_constraintEnd_toStartOf="@+id/imageView8"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageView5" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/ic_sentiment_neutral_black_24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageView7" />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

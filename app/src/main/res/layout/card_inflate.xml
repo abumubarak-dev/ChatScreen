@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <android.support.v7.widget.CardView
+        style="@style/UserCardStyle"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chats_one">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:padding="@dimen/standard_ms"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/img_width_height"
+                android:id="@+id/img_profilee"
+                android:src="@color/black"
+                android:layout_height="@dimen/img_width_height" />
+
+            <TextView
+                app:layout_constraintLeft_toRightOf="@id/img_profilee"
+                android:id="@+id/user_names"
+                style="@style/UsernameStyle"/>
+
+            <TextView
+                style="@style/Sub_Username"
+                app:layout_constraintLeft_toRightOf="@id/img_profilee"
+                app:layout_constraintTop_toBottomOf="@id/user_names" />
+
+            <ImageView
+                app:layout_constraintEnd_toEndOf="parent"
+                style="@style/CircleAdd"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</android.support.constraint.ConstraintLayout>

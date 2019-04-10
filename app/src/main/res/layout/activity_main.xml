@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:paddingTop="@dimen/standard_ms"
+            android:layout_marginRight="@dimen/standard_ms"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:src="@drawable/ic_chevron_left_black_24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                style="@style/ToolabrImageStyle"/>
+
+            <TextView
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:fontFamily="@font/custom"
+                style="@style/TextStyles.TextStyle"/>
+
+            <ImageView
+                style="@style/ToolabrImageStyle"
+                android:src="@drawable/ic_add_black_24dp"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.v7.widget.CardView
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/cardView"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/CardStyle">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:padding="@dimen/padding_card_const"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                app:layout_constraintHorizontal_weight="1"
+                android:id="@+id/search_img"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/search_txt"
+                style="@style/ImageSearch"/>
+
+            <TextView
+                style="@style/SearchStyle"
+                android:id="@+id/search_txt"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/search_img"
+                app:layout_constraintHorizontal_weight="4" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        style="@style/UserCardStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/card_m_top"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:id="@+id/chats_one">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:padding="@dimen/standard_ms"
+            android:id="@+id/first_chat_lyt"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_profile"
+                android:layout_width="@dimen/img_width_height"
+                android:layout_height="@dimen/img_width_height"
+                tools:src="@tools:sample/avatars[0]" />
+
+            <TextView
+                app:layout_constraintLeft_toRightOf="@id/img_profile"
+                android:id="@+id/user_name"
+                style="@style/UsernameStyle"/>
+
+            <TextView
+                style="@style/Sub_Username"
+                app:layout_constraintLeft_toRightOf="@id/img_profile"
+                app:layout_constraintTop_toBottomOf="@id/user_name" />
+
+            <ImageView
+                app:layout_constraintEnd_toEndOf="parent"
+                style="@style/CircleAdd"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        style="@style/UserCardStyle"
+        android:id="@+id/cahtstwo"
+        android:layout_marginTop="@dimen/padding_card_const"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chats_one">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:padding="@dimen/standard_ms"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/img_width_height"
+                android:id="@+id/img_profilees"
+                tools:src="@tools:sample/avatars[1]"
+                android:layout_height="@dimen/img_width_height" />
+
+            <TextView
+                app:layout_constraintLeft_toRightOf="@id/img_profilees"
+                android:id="@+id/user_namess"
+                style="@style/UsernameStyle"/>
+
+            <TextView
+                style="@style/Sub_Username"
+                android:text="@string/sub_id_2"
+                app:layout_constraintLeft_toRightOf="@id/img_profilees"
+                app:layout_constraintTop_toBottomOf="@id/user_namess" />
+
+            <ImageView
+                app:layout_constraintEnd_toEndOf="parent"
+                style="@style/CircleAdd"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/chat3"
+        style="@style/UserCardStyle"
+        android:layout_marginTop="@dimen/padding_card_const"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cahtstwo">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:padding="@dimen/standard_ms"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/img_width_height"
+                android:id="@+id/img_profilee"
+                tools:src="@tools:sample/avatars[3]"
+                android:layout_height="@dimen/img_width_height" />
+
+            <TextView
+                app:layout_constraintLeft_toRightOf="@id/img_profilee"
+                android:id="@+id/user_names"
+                style="@style/UsernameStyle"/>
+
+            <TextView
+                style="@style/Sub_Username"
+                app:layout_constraintLeft_toRightOf="@id/img_profilee"
+                app:layout_constraintTop_toBottomOf="@id/user_names" />
+
+            <ImageView
+                app:layout_constraintEnd_toEndOf="parent"
+                style="@style/CircleAdd"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        style="@style/UserCardStyle"
+        android:layout_marginTop="@dimen/padding_card_const"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chat3">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:padding="@dimen/standard_ms"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/img_width_height"
+                android:id="@+id/img_profileess"
+                tools:src="@tools:sample/avatars[4]"
+                android:layout_height="@dimen/img_width_height" />
+
+            <TextView
+                app:layout_constraintLeft_toRightOf="@id/img_profileess"
+                android:id="@+id/user_namees"
+                style="@style/UsernameStyle"/>
+
+            <TextView
+                style="@style/Sub_Username"
+                app:layout_constraintLeft_toRightOf="@id/img_profileess"
+                app:layout_constraintTop_toBottomOf="@id/user_namees" />
+
+            <ImageView
+                app:layout_constraintEnd_toEndOf="parent"
+                style="@style/CircleAdd"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>
